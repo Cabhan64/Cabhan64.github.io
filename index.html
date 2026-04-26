@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>C.D. | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <!-- NAVBAR -->
+        <nav class="navbar">
+            <h1 class="logo">Cabhan Dunsmore</h1>
+
+            <ul class="nav-links">
+                <li><a href="#hero">Profile</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#other">Projects</a></li>
+                <li><a href="#experiments">Experiments</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- HERO / PROFILE -->
+        <div class="hero" id="hero">
+            <h2>Hello, I'm <span>Cabhan Dunsmore</span></h2>
+            <p class="subtitle">Junior Game Programmer | Unity & C++ Developer</p>
+
+            <p class="hero-bio">
+                Passionate game developer with strong technical experience in Unity (C#) and C++.
+                I specialise in gameplay mechanics, physics systems, shaders, puzzle design, and building complete, polished games from concept to playable experience.
+            </p>
+
+            <p class="hero-goal">
+                Currently seeking <strong>Junior Game Programmer</strong> or <strong>Gameplay Programmer</strong> roles
+                where I can contribute clean, efficient code and creative problem-solving to create engaging player experiences.
+            </p>
+
+            <p class="skills">
+                <strong>Core Skills:</strong> Unity • C# • C++ • Shader Development • Gameplay Systems • Physics • Puzzle Design • Client-Server Networking
+            </p>
+
+            <a href="#featured" class="btn">View My Work</a>
+        </div>
+
+        <!-- PROJECT DETAIL VIEW -->
+        <div class="hero hidden" id="project-detail">
+            <h2 id="project-title"></h2>
+            <p id="project-description"></p>
+
+            <!-- MULTI-VIDEO CONTAINER (works for any number of videos) -->
+            <div id="media-container" class="media-container"></div>
+
+            <!-- YouTube -->
+            <iframe id="project-iframe" frameborder="0" allowfullscreen class="hidden"></iframe>
+
+            <!-- Single Local Video (legacy fallback) -->
+            <video id="project-video" controls class="hidden">
+                <source id="project-video-source" type="video/mp4">
+            </video>
+
+            <!-- IMAGE FALLBACK -->
+            <img id="project-image" class="hidden" />
+
+            <a id="project-link" class="btn" target="_blank">Open Project</a>
+            <button class="btn" id="back-btn">Back</button>
+        </div>
+
+    </header>
+
+    <!-- FEATURED -->
+    <section id="featured" class="section">
+        <h2>⭐ Featured Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+                <h3>Multiverse Academy</h3>
+                <img src="MultiverseAcademy.jpg" alt="">
+                <p>2D platformer project.</p>
+
+                <a href="#" class="view-btn"
+                   data-title="Multiverse Academy"
+                   data-description="A 2D platformer built for a university project, based on the multiverse academy webcomic. As one of the programmers I Implemented some core gameplay mechanics and interactive elements using Unity and C#."
+                   data-video="https://www.youtube.com/embed/Zgo0hKlNNJI"
+                   data-link="https://gcugames.itch.io/multiverse-academy">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Dungbeatle</h3>
+                <img src="Dungbet.png" alt="">
+                <p>Personal project.</p>
+
+                <a href="#" class="view-btn"
+                   data-title="Dungbeatle"
+                   data-description="A personal Unity project inspired by Katamari Damacy and Glover. Designed and implemented a physics-driven gameplay system where the player rolls an object that grows in size as it collects items."
+                   data-image="Dungbet.png"
+                   data-link="https://ross64.itch.io/dung-beatle-project?secret=YY1WYUW41e4hKp7UqqBKW24K0M">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>AR-GE-BE</h3>
+                <img src="ARGEBE.png" alt="">
+                <p>Game jam project.</p>
+
+                <a href="#" class="view-btn"
+                   data-title="AR-GE-BE"
+                   data-description="Game jam entry developed around the 'Mask' theme. As one of the two primary programmers, I implemented level progression systems, interactive game objects (doors and spikes), and created a custom colour filter shader that produces the distinctive visual effect when players equip coloured masks."
+                   data-image="ARGEEBEIMG.png"
+                   data-link="https://seanjdunsmore.itch.io/ar-ge-be">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Nonogram Project</h3>
+                <img src="Flower.png" alt="">
+                <p>University project.</p>
+
+                <a href="#" class="view-btn"
+                   data-title="NonoGram Project"
+                   data-description="Honours project in Unity featuring a Nonogram-based puzzle system. Built to evaluate the effectiveness of explicit versus implicit tutorial design through puzzle mechanics inspired by The Witness."
+                   data-image="NonoGramVid.mp4"
+                   data-link="https://github.com/Cabhan64/NonogramsProject">
+                    View Project
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- OTHER -->
+    <section id="other" class="section">
+        <h2>🧩 Other Projects</h2>
+
+        <div class="projects-container">
+
+            <!-- UPDATED BREAKOUT CARD - now supports multiple videos -->
+            <div class="project-card">
+                <h3>Breakout / Space Invaders</h3>
+                <img src="ConsoleIcon.png" alt="">
+                <p>Two classic arcade games built in C++ (Breakout + Space Invaders).</p>
+
+                <a href="#" class="view-btn"
+                   data-title="Breakout"
+                   data-description="Two classic console arcade games — Breakout and Space Invaders — built entirely in C++. Implemented complete game logic, collision detection, and input systems."
+                   data-videos="Breakout.mp4|Breakout,SpaceInvaders.mp4|Space Invaders"
+                   data-link="https://github.com/Cabhan64/Spaceinvaders-Breakout-CD">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Networking Project</h3>
+                <img src="WIFI.png">
+                <p>Client-server system.</p>
+
+                <a href="#" class="view-btn"
+                   data-title="Networking Project"
+                   data-description="Designed and implemented a client-server networking system to handle real-time communication, data synchronization, and multiplayer functionality."
+                   data-video="NetworkingVid.mp4"
+                   data-link="https://github.com/Cabhan64/Networkinglab">
+                    View Project
+                </a>
+            </div>
+
+            <div class="project-card">
+                <h3>Energy Champion</h3>
+                <img src="EnergyChampion.png" alt="">
+                <p>University project.</p>
+
+                <a href="#" class="view-btn"
+                   data-title="Energy Champion"
+                   data-description="University project focused on raising awareness of energy efficiency in factory environments. Primarily responsible for player interaction systems, menu navigation, and character movement mechanics."
+                   data-video="https://www.youtube.com/embed/lPYB4rgDfd0"
+                   data-link="https://adios-amoeba.itch.io/energy-champion">
+                    View Project
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- EXPERIMENTS -->
+    <section id="experiments" class="section">
+        <h2>🛠 Technical Experiments</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card">
+                <h3>Shader</h3>
+                <img src="GhostShader.jpg">
+                <p>Graphics experiment.</p>
+
+                <a href="#" class="view-btn"
+                   data-title="Shader"
+                   data-description="A shader experiment exploring rendering techniques, such as Ghost-like transparency shaders, and a metalic shader."
+                   data-video="ShaderVid.mp4"
+                   data-link="https://github.com/Cabhan64/GPYear4Lab">
+                    View Project
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+        <h2>Contact Me</h2>
+
+        <p>
+            <a href="cabhandunsmore@ntlworld.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </p>
+
+        <p>
+            <a href="https://github.com/Cabhan64" target="_blank">
+                <i class="fab fa-github"></i>
+            </a>
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 Cabhan Dunsmore</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
